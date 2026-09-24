@@ -1,6 +1,6 @@
-from VITYARTHIPROJECT.student_management_f2 import SM
-from VITYARTHIPROJECT.sci_cal_f1 import cal
-from VITYARTHIPROJECT.system_dig_f3 import sys_diag
+from student_management_f2 import SM
+from sci_cal_f1 import cal
+from system_dig_f3 import sys_diag
 while True:
     print("\n" + "=" * 58)
     print("           STUDENT UTILITY & ENGINEERING TOOLKIT          ")
