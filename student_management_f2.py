@@ -17,36 +17,36 @@ def SM():
 
         # 1 Attendance
         elif choice == "1":
-            mat_att = int(input("Enter attended classes of Maths >>> "))
-            math_tot = int(input("Enter total classes of Maths >>> "))
+            mat_att = int(input("enter attended classes of Maths >>>  "))
+            math_tot = int(input("enter total classes of Maths >>>>"))
 
-            phy_att = int(input("Enter attended classes of Physics >>> "))
-            phy_tot = int(input("Enter total classes of Physics >>> "))
+            phy_att = int(input("enter attended classes of Physics >>>> "))
+            phy_tot = int(input("enter total classes of Physics >>>>"))
 
-            chem_att = int(input("Enter attended classes of Chemistry >>> "))
-            chem_tot = int(input("Enter total classes of Chemistry >>> "))
+            chem_att = int(input("enter attended classes of Chemistry >>>> "))
+            chem_tot = int(input("enter total classes of Chemistry>>> "))
 
-            cse_att = int(input("Enter attended classes of CSE >>> "))
-            cse_tot = int(input("Enter total classes of CSE >>> "))
+            cse_att = int(input("enter attended classes of CSE >>>> "))
+            cse_tot = int(input("enter total classes of CSE >>>"))
 
             while True:
                 print("\n" + "=" * 40)
-                print("      STUDENT ATTENDANCE SYSTEM")
+                print("    STUDENT ATTENDANCE SYSTEM")
                 print("=" * 40)
                 print(" [1] View Attendance")
                 print(" [2] Mark Attendance (Present/Absent)")
                 print(" [0] Exit to Student Menu")
                 print("=" * 40)
 
-                att_choice = input("Enter choice (0-2) >>> ").strip()
+                att_choice = input("enter choice (0-2) >>> ").strip()
 
                 if att_choice == "0":
-                    print("Returning to Student Management...")
+                    print("returning to student management...")
                     break
 
                 # 1. Calculation of %
                 elif att_choice == "1":
-                    print("\n---- Current Attendance ----")
+                    print("\n---- current attendance ----")
 
                     # Maths
                     mat_p = (mat_att / math_tot) * 100 if math_tot > 0 else 0
@@ -80,7 +80,7 @@ def SM():
                         cse_status = "Class attend karte jaa , cse ke , kam hai attendance bahut"
                     print("CSE:       ", cse_att, "/", cse_tot, "(", round(cse_p, 1), "%) ->", cse_status)
 
-                # 2. Mark Attendance
+                #2.Mark Attendance
                 elif att_choice == "2":
                     print("\nSelect Subject:")
                     print(" [1] Maths")
@@ -128,10 +128,10 @@ def SM():
                 else:
                     print("Invalid choice, please select 0, 1, or 2.")
 
-        # 2 Grades and Marks (VIT Relative Grading System)
+        #2 grades and marks (VIT relative grading system)
         elif choice == "2":
             print("\n" + "=" * 55)
-            print("        VIT EXAM & RELATIVE GRADE EVALUATOR        ")
+            print("     VIT EXAM & RELATIVE GRADE EVALUATOR      ")
             print("=" * 55)
 
             subjects = ["Maths", "Physics", "Chemistry", "CSE"]
@@ -160,9 +160,9 @@ def SM():
                 print("-" * 45)
 
                 # 1. Input Exam Marks
-                cat1 = float(input("Enter CAT 1 Marks (out of 50) >>> "))
-                cat2 = float(input("Enter CAT 2 Marks (out of 50) >>> "))
-                internals = float(input("Enter DA / Quiz Total (out of 30) >>> "))
+                cat1 = float(input("enter CAT 1 Marks (out of 50) >>> "))
+                cat2 = float(input("enter CAT 2 Marks (out of 50) >>> "))
+                internals = float(input("enter DA / Quiz Total (out of 30) >>> "))
                 fat = float(input("Enter FAT Marks (out of 100) >>> "))
 
                 # 2. Weightage Scaling:
@@ -213,17 +213,17 @@ def SM():
                 print(f"Calculated SGPA      : {sgpa}")
 
                 if sgpa >= 9.0:
-                    print("Remark               : Outstanding Performance (Dean's List)!")
+                    print("Remark               : YOU REALLY NAILED IT BRO...!")
                 elif sgpa >= 8.0:
-                    print("Remark               : Very Good! First Class with Distinction range.")
+                    print("Remark               : ITS VERRY GOOD SCORE BRP..")
                 elif sgpa >= 7.0:
-                    print("Remark               : Decent score, aim higher in FAT next time.")
+                    print("Remark               : ITS DECENT!")
                 else:
-                    print("Remark               : Critical! Focus on improving in subsequent terms.")
+                    print("Remark               : STUDY KAR BHAI , KAM HAI CGPA TERA ...")
                 print("=" * 55)
 
         else:
-            print("Invalid option! Please select 0, 1, or 2.")
+            print("invalid option! please select 0,1,or2.")
             
 if __name__ == "__main__":
     SM()
