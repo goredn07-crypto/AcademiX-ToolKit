@@ -6,57 +6,57 @@ def cal():
         print("\n" + "="*50)
         print("        SCIENTIFIC AND UTILITY CALCULATOR         ")
         print("=" *50)
-        print("   [1] ADDITION (+)   ")
-        print("   [2] SUBTRACTION (-)   ")
-        print("   [3] MULTIPLICATION (*)   ")
-        print("   [4] DIVISION (/)   ")
-        print("   [5] LOGARITHM (log base b of x)   ")
-        print("   [6] TRIGONOMETRY (sin , cos ,tan )   ")
-        print("   [7] COMPOUND INTEREST CALCULATOR    ")
-        print("   [8] BODY MASS INDEX AND CAT (BMI)   ")
-        print("   [9] UNIT CONVERTER  (uniconv)   ")
-        print("   [10] POWER AND SQUARE ROOT ")
-        print("   [11] Numeric System Converter")
-        print("   [12] Password Generator")
-        print("   [0] back to main menu   ")
+        print("  [1] ADDITION (+)   ")
+        print(" [2] SUBTRACTION (-)   ")
+        print("  [3] MULTIPLICATION (*)   ")
+        print(" [4] DIVISION (/)   ")
+        print("  [5] LOGARITHM (log base b of x)   ")
+        print(" [6] TRIGONOMETRY (sin , cos ,tan )   ")
+        print("  [7] COMPOUND INTEREST CALCULATOR    ")
+        print("  [8] BODY MASS INDEX AND CAT (BMI)   ")
+        print(" [9] UNIT CONVERTER  (uniconv)   ")
+        print("  [10] POWER AND SQUARE ROOT ")
+        print(" [11] Numeric System Converter")
+        print("  [12] Password Generator")
+        print(" [0] back to main menu   ")
         print("="*50)
 
-        choice = input("Enter your choice (0-10:>>>)").strip()
+        choice  = input("Enter your choice (0-10:>>>)").strip()
 
         #0 return to main menu
-        if choice == "0":
-            print('\nReturning.....')
+        if choice  == "0":
+            print('\nreturning bro.....')
             break
         #1 add
         if choice=='1':
             a = float(input("enter first no. >>> "))
-            b = float(input("enter second no. >>> "))
+            b = float(input("enter second no.>>> "))
             c = (a+b)
-            print("Answer IS >>> " , c )
+            print("Answer IS   >>>" , c )
 
         #sub
         elif choice=='2':
-            a = float(input("enter first no. >>> "))
-            b = float(input("enter second no. >>> "))
+            a = float(input("enter first no.>>> "))
+            b = float(input("enter second no.  >>> "))
             c = (a-b)
-            print("Answer IS >>> " , c )
+            print("Answer IS >>> " , c)
 
         #mul 
         elif choice=='3':
-            a = float(input("enter first no. >>> "))
-            b = float(input("enter second no. >>> "))
+            a = float(input("enter first no.>> "))
+            b = float(input("enter second no.>>> "))
             c = (a*b)
-            print("Answer IS >>> " , c )
+            print("Answer IS >>>",c)
 
         #div
         elif choice=='4':
-            a = float(input("enter first no. >>> "))
-            b = float(input("enter second no. >>> "))
+            a = float(input("enter first no.>>>"))
+            b = float(input("enter second no. >>"))
             if b==0:
-                c =  "INFINITY"
+                c =  ",,,infinity,,,"
             else:
                 c = (a/b)
-            print("Answer IS >>> " , c )
+            print("Answer IS >>>" , c )
 
         #log
         elif choice=="5":
@@ -167,22 +167,20 @@ def cal():
                 else:
                     c = math.sqrt(x)
                     print("Answer IS >>> ", c)
-
-                    
             else:
-                                print("Invalid option")
+                                print("invalid option ")
 
-        # [11] Number System Converter (Custom Logic)
-        elif choice == "11":
-            print("\n" + "-" * 35)
-            print("     NUMBER SYSTEM CONVERTER")
+        # [11]number system converter(custom logic)
+        elif choice  == "11":
+            print("\n"+ "-" * 35)
+            print("   NUMBER SYSTEM CONVERTER")
             print("-" * 35)
-            print(" [1] BINARY TO DECIMAL")
-            print(" [2] DECIMAL TO BINARY")
+            print(" [1]  BINARY TO DECIMAL")
+            print(" [2]DECIMAL TO BINARY")
             print(" [3] DECIMAL TO OCTAL")
             print(" [4] DECIMAL TO HEXADECIMAL")
-            print(" [5] BINARY TO OCTAL")
-            print(" [6] BINARY TO HEXADECIMAL")
+            print(" [5]BINARY TO OCTAL")
+            print(" [6]BINARY TO HEXADECIMAL")
             print(" [7] Back ")
             print("-" * 35)
 
@@ -203,7 +201,7 @@ def cal():
                         decimal += digit * (2 ** power)
                         b_num = b_num // 10
                         power += 1
-                    print("Answer IS >>>", decimal)
+                    print("your Answer IS >>>", decimal)
 
             # 2. Decimal to Binary
             elif sub_choice == "2":
@@ -217,9 +215,9 @@ def cal():
                         rem = temp % 2
                         binary_str = str(rem) + binary_str
                         temp = temp // 2
-                    print("Answer IS >>>", binary_str)
+                    print("your Answer IS >>>", binary_str)
 
-            # 3. Decimal to Octal
+            #3.Decimal to Octal
             elif sub_choice == "3":
                 n = int(input("Enter decimal number >>> "))
                 if n == 0:
@@ -231,11 +229,11 @@ def cal():
                         rem = temp % 8
                         octal_str = str(rem) + octal_str
                         temp = temp // 8
-                    print("Answer IS >>>", octal_str)
+                    print(" your Answer IS >>>>", octal_str)
 
-            # 4. Decimal to Hexadecimal
+            #4.Decimal to Hexadecimal
             elif sub_choice == "4":
-                n = int(input("Enter decimal number >>> "))
+                n = int(input("enter decimal number >>> "))
                 if n == 0:
                     print("Answer IS >>> 0")
                 else:
@@ -243,12 +241,12 @@ def cal():
                     hex_str = ""
                     temp = n
                     while temp > 0:
-                        rem = temp % 16
-                        hex_str = hex_digits[rem] + hex_str
-                        temp = temp // 16
+                        rem =temp % 16
+                        hex_str= hex_digits[rem]+hex_str
+                        temp =temp//16
                     print("Answer IS >>>", hex_str)
 
-            # 5. Binary to Octal (Binary -> Decimal -> Octal)
+            #5.Binary to Octal (Binary -> Decimal -> Octal)
             elif sub_choice == "5":
                 b_str = input("Enter binary number >>> ").strip()
                 if not all(ch in "01" for ch in b_str):
@@ -306,32 +304,24 @@ def cal():
                         print("Answer IS >>>", hex_str)
             elif sub_choice == "0":
                 break
-
             else:
                 print("Invalid selection! Please choose between 1 and 6.")
         # [12] Password Generator (Using Sets, No Libraries)
         elif choice == "12":
             print("\n" + "-" * 35)
-            print("       PASSWORD GENERATOR")
+            print("  PASSWORD GENERATOR")
             print("-" * 35)
-            print(" [1] 8 Character Password")
-            print(" [2] 12 Character Password")
-            print(" [3] 4 Digit PIN")
-            print(" [0] Exit")
+            print(" [1]8 Character Password")
+            print(" [2]12 Character Password")
+            print(" [3]4 Digit PIN")
+            print(" [0]Exit")
             print("-" * 35)
 
             sub_choice = input("ENTER THE OPTIONS (0-3) >>> ").strip()
 
             # Character pools stored as sets
-            char_pool = {
-                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-                'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-                'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-                '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', '?'
-            }
-            digit_pool = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
+            char_pool = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','-','_','+','=','?'}
+            digit_pool = {'0','1','2','3','4','5','6','7','8','9'}
 
             if sub_choice == "0":
                 print("Returning to calculator menu...")
@@ -339,21 +329,21 @@ def cal():
 
             elif sub_choice == "1":
                 pwd = ""
-                pool_copy = set(char_pool)  # Work on a copy so the base set stays intact
+                pool_copy =set(char_pool)  # Work on a copy so the base set stays intact
                 for _ in range(8):
-                    char = pool_copy.pop()   # Pops an arbitrary character from the set
-                    pwd += char
-                print("Generated 8-Char Password >>>", pwd)
+                    char =pool_copy.pop()   # Pops an arbitrary character from the set
+                    pwd +=char
+                print("generated 8-char password >>>>", pwd)
 
-            elif sub_choice == "2":
+            elif sub_choice== "2":
                 pwd = ""
-                pool_copy = set(char_pool)
+                pool_copy =set(char_pool)
                 for _ in range(12):
-                    char = pool_copy.pop()
-                    pwd += char
+                    char =pool_copy.pop()
+                    pwd +=char
                 print("Generated 12-Char Password >>>", pwd)
 
-            elif sub_choice == "3":
+            elif sub_choice== "3":
                 pin = ""
                 pool_copy = set(digit_pool)
                 for _ in range(4):
